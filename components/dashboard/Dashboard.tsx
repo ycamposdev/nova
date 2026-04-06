@@ -127,7 +127,9 @@ export default function Dashboard() {
       {/* 3. Your Study Decks Grid (DINÁMICO) */}
       <section className="font-['Inter']">
         <div className="flex justify-between items-center mb-8">
-          <h3 className="text-xl font-bold text-[#1a1c1c]">Your Study Decks</h3>
+          <h3 className="text-xl font-bold text-[#1a1c1c]">
+            Tus Tarjetas de Estudio
+          </h3>
           <div className="flex gap-2">
             <button className="p-2 bg-[#ffffff] rounded-lg border border-[#c3c5d9]/15">
               <span className="material-symbols-outlined" style={iconOutline}>

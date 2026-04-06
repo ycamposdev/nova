@@ -44,7 +44,7 @@ export default function Sidebar() {
           <span className="material-symbols-outlined" style={iconStyle}>
             history
           </span>
-          Recent
+          Recientes
         </a>
 
         {/* Favorites */}
@@ -55,7 +55,7 @@ export default function Sidebar() {
           <span className="material-symbols-outlined" style={iconStyle}>
             star
           </span>
-          Favorites
+          Favoritos
         </a>
 
         {/* Settings */}
@@ -66,7 +66,7 @@ export default function Sidebar() {
           <span className="material-symbols-outlined" style={iconStyle}>
             settings
           </span>
-          Settings
+          Configuración
         </a>
       </nav>
 
@@ -79,7 +79,7 @@ export default function Sidebar() {
           >
             create_new_folder
           </span>
-          Create Folder
+          Marketplace
         </button>
       </div>
 
@@ -92,7 +92,7 @@ export default function Sidebar() {
           <span className="material-symbols-outlined" style={iconStyle}>
             help
           </span>
-          Help Center
+          Centro de Ayuda
         </a>
         <a
           href="#"
@@ -101,7 +101,7 @@ export default function Sidebar() {
           <span className="material-symbols-outlined" style={iconStyle}>
             logout
           </span>
-          Log Out
+          Cerrar Sesión
         </a>
       </div>
     </aside>
