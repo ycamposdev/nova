@@ -1,10 +1,14 @@
 "use client";
 
+import { useState } from "react";
+import CreateDeckModal from "./dashboard/CreateDeckModal";
+
 export default function Header() {
   const iconStyle = {
     fontVariationSettings: "'FILL' 0, 'wght' 300, 'GRAD' 0, 'opsz' 24",
     fontSize: "20px",
   };
+  const [isModalOpen, setIsModalOpen] = useState(false);
 
   return (
     <header className="fixed top-0 right-0 w-[calc(100%-240px)] z-30 bg-[#ffffff] border-b border-[#e2e8f0] flex justify-between items-center h-16 px-8 ml-[240px] font-['Inter'] antialiased">
@@ -21,7 +25,7 @@ export default function Header() {
           >
             search
           </span>
-          {/* El input DEBE ser gris (#f3f3f3) para resaltar sobre el fondo blanco del header */}
+
           <input
             className="w-full bg-[#f3f3f3] border-none rounded-lg py-2 pl-10 pr-4 text-sm focus:ring-2 focus:ring-[#0052ff]/10 transition-all outline-none text-[#1a1c1c] placeholder-[#434656]/60"
             placeholder="Buscar recursos, tarjetas o exámenes..."
@@ -30,7 +34,6 @@ export default function Header() {
         </div>
       </div>
 
-      {/* Actions Area */}
       <div className="flex items-center gap-4">
         <button className="flex items-center gap-2 px-4 py-2 text-sm font-semibold text-[#1a1c1c] hover:bg-[#f3f3f3] transition-colors rounded-lg">
           Modo Examén
@@ -41,6 +44,7 @@ export default function Header() {
           style={{
             background: "linear-gradient(135deg, #003ec7 0%, #0052ff 100%)",
           }}
+          onClick={() => setIsModalOpen(true)}
         >
           Nueva Tarjeta
         </button>
@@ -59,6 +63,10 @@ export default function Header() {
           </span>
         </button>
       </div>
+      <CreateDeckModal
+        isOpen={isModalOpen}
+        onClose={() => setIsModalOpen(false)}
+      />
     </header>
   );
 }
